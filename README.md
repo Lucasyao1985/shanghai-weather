@@ -1,11 +1,8 @@
-<div align="center">
-
-[![Release version](https://img.shields.io/github/v/release/Lucasyao1985/shanghai-weather?color=brightgreen&label=Latest&style=for-the-badge)](https://github.com/Lucasyao1985/shanghai-weather/releases "Latest Release")
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
-[![License: Unlicense](https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge)](LICENSE "License")
-[![Commits](https://img.shields.io/github/commit-activity/m/Lucasyao1985/shanghai-weather?label=commits&style=for-the-badge)](https://github.com/Lucasyao1985/shanghai-weather/commits "Commit History")
-
-</div>
+<p align="center">
+  <a href="https://github.com/Lucasyao1985/shanghai-weather"><img alt="Release version" src="https://img.shields.io/github/v/release/Lucasyao1985/shanghai-weather?color=brightgreen&label=Latest&style=for-the-badge" /></a>
+  <a href="LICENSE"><img alt="License: Unlicense" src="https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge" /></a>
+  <a href="https://github.com/Lucasyao1985/shanghai-weather/commits"><img alt="Commits" src="https://img.shields.io/github/commit-activity/m/Lucasyao1985/shanghai-weather?label=commits&style=for-the-badge" /></a>
+</p>
 
 # 上海天气 Skill for Claude Code
 
