@@ -11,15 +11,19 @@
 
 ---
 
-**上海天气是一个 [Claude Code](https://claude.ai) 技能，从 [上海市气象局](http://sh.cma.gov.cn/) 获取上海实时和预报天气数据。** 一问即答。
+**上海天气是一个 [Claude Code](https://claude.ai) 技能，从 [上海市气象局](http://sh.cma.gov.cn/) 获取上海实时和预报天气数据。**
 
-<table>
-<tr><td><b>实时天气</b></td><td>温度、湿度、露点、气压、风速、降水量。</td></tr>
-<tr><td><b>5 天预报</b></td><td>最高/低温、风力、降雨概率。</td></tr>
-<tr><td><b>空气质量 (AQI)</b></td><td>当前 AQI 等级、范围、首要污染物。</td></tr>
-<tr><td><b>灾害预警</b></td><td>台风、暴雨、大风等实时预警信息。</td></tr>
-<tr><td><b>气象雷达</b></td><td>10 分钟间隔的多普勒雷达图像。</td></tr>
-</table>
+## 功能特点
+
+| 功能 | 数据源 | 说明 |
+|------|----------|------|
+| 实时天气 | 实时 JSON API | 温度、湿度、露点、气压、风速、风向、降水量 |
+| 5 天预报 | weatherServiceFiveDay API | 晴/阴/雨、高低温度、风力风向、降水概率 |
+| 生活指数 | ShzsybDay / ShzsybMorrow | 晾晒、化妆、防晒、穿、舒适度、运动等 8+ 指数 |
+| AQI 预报 | GetTextinfoAQI | 空气质量等级、数值范围、首要污染物 |
+| 灾害预警 | GetAlertListByType | 暴雨/台风/大雾预警（蓝/黄/橙/红） |
+| 雷达图 | GetImgInfoList | 10 分钟间隔多普勒雷达图 PNG |
+| 卫星云图 | GetImgInfoList | 卫星云图 URL 列表 |
 
 ---
 
@@ -33,39 +37,29 @@ git clone https://github.com/Lucasyao1985/shanghai-weather.git
 - **Windows:** `C:\Users\<你的用户名>\.claude\skills\`
 - **macOS/Linux:** `~/.claude/skills/`
 
-## 使用方法
+## 使用示例
 
-直接向 Claude 提问上海天气相关的问题：
+直接向 Claude 提问：
 
 ```
-上海今天天气怎么样？
-上海湿度多少？
-上海未来 5 天天气预报？
-上海空气质量如何？
+上海今天天气怎么样？湿度多少？
+上海未来 5 天天气预报
+上海空气质量如何？AQI 预报
 上海有什么天气预警吗？
 看看上海的气象雷达图
+上海今天适合晾晒吗？
 ```
 
-技能会自动识别上海天气相关问题并返回结构化数据。
-
-## 工作原理
-
-```
-提问 → [fetch_weather.sh] → [上海市气象局 API] → 结构化天气数据
-```
-
-技能直接查询上海市气象局官方端点（sh.cma.gov.cn），获取实时数据、预报、AQI 和预警信息。
-
-## 项目结构
+## 文件结构
 
 ```
 shanghai-weather/
-├── SKILL.md                 # 技能定义文件
-├── README.md                # 英文文档
-├── README.zh-CN.md          # 中文文档
-├── scripts/
-│   └── fetch_weather.sh     # 核心数据获取脚本
-└── references/
+├── SKILL.md           # 技能定义文件
+├── README.md          # 英文文档
+├── README.zh-CN.md    # 中文文档
+├── scripts/           # 执行脚本
+│   └── fetch_weather.sh  # 核心数据获取脚本
+└── references/        # 参考资料
 ```
 
 ## 许可证
