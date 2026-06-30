@@ -1,3 +1,12 @@
+<div align="center">
+
+[![Release version](https://img.shields.io/github/v/release/Lucasyao1985/shanghai-weather?color=brightgreen&label=Latest&style=for-the-badge)](https://github.com/Lucasyao1985/shanghai-weather/releases "Latest Release")
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=for-the-badge)](https://discord.gg/H5MNcFW63r "Discord")
+[![License: Unlicense](https://img.shields.io/badge/-Unlicense-red.svg?style=for-the-badge)](LICENSE "License")
+[![Commits](https://img.shields.io/github/commit-activity/m/Lucasyao1985/shanghai-weather?label=commits&style=for-the-badge)](https://github.com/Lucasyao1985/shanghai-weather/commits "Commit History")
+
+</div>
+
 # 上海天气 Skill for Claude Code
 
 从 [上海市气象局](http://sh.cma.gov.cn/) 获取上海实时天气、湿度、预报、AQI、灾害预警、雷达图、卫星云图和生活气象指数。
@@ -77,4 +86,4 @@ life-index   - 今天+明天生活指数 JSON
 
 ## License
 
-MIT
+Unlicense
